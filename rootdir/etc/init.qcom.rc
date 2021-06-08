@@ -1000,6 +1000,11 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
 
 on charger
     setprop persist.sys.usb.config mass_storage
+
+    # Notification LED
+    chown system system /sys/class/leds/red/brightness
+    write /sys/class/leds/red/brightness 255
+    
     start qcom-post-boot
 
 #add poweroffhandler
