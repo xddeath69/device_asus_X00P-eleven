@@ -139,6 +139,7 @@ VENDOR_SECURITY_PATCH := 2020-03-05
 
 # SEPolicy
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Treble
 BOARD_VNDK_VERSION := current
