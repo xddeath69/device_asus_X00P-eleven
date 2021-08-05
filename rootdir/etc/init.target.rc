@@ -61,13 +61,6 @@ on post-fs-data
 
     mkdir /data/misc/dts 0770 media audio
 
-    #add for leadcore fingerprint
-    mkdir /data/fpsensor
-    chown system system /data/fpsensor
-    chown system system /data/fpsensor/socket
-    chmod 0660  /data/fpsensor
-    chmod 0660  /data/fpsensor/socket
-
     #Create folder for mm-qcamera-daemon
     mkdir /data/vendor/camera 0770 camera camera
 
@@ -80,18 +73,6 @@ service qcamerasvr /system/vendor/bin/mm-qcamera-daemon
 on init
    write /dev/stune/top-app/schedtune.colocate 1
    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-    #add by microarray start 20180323
-    chmod 0666 /dev/madev0
-    chown system system /dev/madev0
-    #add by microarray end 20180323
-    #add for leadcore fingerprint
-    chmod 0660 /dev/fpsensor
-    chown system system /dev/fpsensor
-
-    #add by sunwave start
-    chown system system /dev/sunwave_fp
-    chmod 0660          /dev/sunwave_fp
-    #add by sunwave end
 
 service qfp-daemon /system/vendor/bin/qfp-daemon
    class late_start
