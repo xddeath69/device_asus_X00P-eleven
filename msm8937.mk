@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/qcom-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/qcom-tpd.kl
+
 # Keymaster
 PRODUCT_PACKAGES += \
     libcrypto.vendor
