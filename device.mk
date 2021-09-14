@@ -368,8 +368,7 @@ PRODUCT_PACKAGES += \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
-	TetheringConfigOverlay \
-    wcnss_service \
+    TetheringConfigOverlay \
     WifiOverlay \
     wificond \
     wpa_supplicant \
