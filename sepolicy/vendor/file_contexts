@@ -29,6 +29,9 @@
 /dev/sunwave_fp                                                             u:object_r:fingerprint_device:s0
 /sys/devices(/platform)?/soc/soc:fpc1020(/.*)?                              u:object_r:fingerprint_sysfs:s0
 
+# Hals
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.asus_X00P     u:object_r:hal_light_default_exec:s0
+
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                                       u:object_r:vendor_idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?                                 u:object_r:vendor_keylayout_file:s0

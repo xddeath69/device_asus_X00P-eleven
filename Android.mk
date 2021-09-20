@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter X00H X00I X00L X00P X00R,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),X00P)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
