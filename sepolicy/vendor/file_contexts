@@ -29,8 +29,8 @@
 /dev/sunwave_fp                                                             u:object_r:fingerprint_device:s0
 /sys/devices(/platform)?/soc/soc:fpc1020(/.*)?                              u:object_r:fingerprint_sysfs:s0
 
-# Hals
-/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.asus_X00P     u:object_r:hal_light_default_exec:s0
+# Light HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.X00P                                    u:object_r:hal_light_default_exec:s0
 
 # Fingerprint - HAL
 /vendor/lib(64)?/hw/microarray\.fingerprint\.default\.so                                                      u:object_r:hal_fingerprint_default_exec:s0
