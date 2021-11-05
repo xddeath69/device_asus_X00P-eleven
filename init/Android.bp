@@ -1,23 +1,26 @@
 //
-// Copyright (C) 2021 The LineageOS Project
+// Copyright (C) 2019 The LineageOS Project
 //
-// SPDX-License-Identifier: Apache-2.0
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 //
 
 cc_library_static {
-    name: "libinit_asus_msm8937",
-    srcs: [
-        "libinit_dalvik_heap.cpp",
-        "libinit_utils.cpp",
-    ],
-    export_include_dirs: ["include"],
+    name: "libinit_msm8937",
     recovery_available: true,
-}
-
-cc_library_static {
-    name: "init_asus_msm8937",
-    srcs: ["init_asus_msm8937.cpp"],
-    whole_static_libs: ["libinit_asus_msm8937"],
-    include_dirs: ["system/core/init"],
-    recovery_available: true,
+    srcs: ["init_msm8937.cpp"],
+    whole_static_libs: ["libbase"],
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/init"
+    ]
 }
