@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    Snap
+    CamX
 
 # Crypto
 EXTRA_VENDOR_LIBRARIES += \
