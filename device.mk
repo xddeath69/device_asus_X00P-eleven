@@ -382,7 +382,8 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    QPGallery
+    QPGallery \
+    Via
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/asus/X00P/X00P-vendor.mk)
