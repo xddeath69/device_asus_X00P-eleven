@@ -42,6 +42,9 @@ on fs
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/bms 0700 root system
     restorecon_recursive /mnt/vendor/persist
+    
+    rm /cache/boot_lc_main.txt
+    start boot_lc_main
 
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
@@ -279,6 +282,13 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
+    
+service boot_lc_main /system/bin/logcat -f /cache/boot_lc_main.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
 
 service vendor.vm_bms /vendor/bin/vm_bms
     class main
@@ -297,3 +307,6 @@ on boot
 on property:sys.boot_completed=1 && property:sys.ftrace.debug.on=0
     write /d/tracing/tracing_on 0
     write /sys/kernel/debug/tracing/tracing_on 0
+    
+on property:sys.boot_completed=1
+    stop boot_lc_main
