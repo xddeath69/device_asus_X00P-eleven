@@ -16,11 +16,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/asus/X00P/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_BRAND := asus
+PRODUCT_BRAND := Asus
 PRODUCT_DEVICE := X00P
-PRODUCT_MANUFACTURER := asus
+PRODUCT_MANUFACTURER := Asus
 PRODUCT_NAME := lineage_X00P
-PRODUCT_MODEL := ASUS_X00PD
+PRODUCT_MODEL := Zenfone Max M1
 
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
